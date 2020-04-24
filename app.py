@@ -1,5 +1,9 @@
 from flask import Flask, jsonify, Request
 
+"""
+aqui editar antes de pasar a master
+yo creo que lo mejor es dividirnos por partes no ??? 
+"""
 app = Flask(__name__)
 
 from  products import products # importacion 
