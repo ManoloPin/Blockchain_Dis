@@ -44,19 +44,19 @@ y se incluye /new_transactions para que se podamos incluir el siguiente codigo J
 
 - Esta es una vista previa de como esta funcinando las pruebas de Insomnia para verificar si esta ingresando la transferencia.
 
-![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/Imagen1.jpeg)
+![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen1.jpeg)
 
 - Con este codigo se esta verificando la cadena de los bloques.
 
-![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/Imagen2.jpeg)
+![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen2.jpeg)
 
 - Este es otra prueba realizada donde hay dos transacciones en el bloque con la funcion minar, ya que se entiende que para utilizar la funcion para cerrar el bloque ya que sin minar no se puede agregar el bloque.
 
-![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/Imagen3.jpeg)
+![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen3.jpeg)
 
 - Aqui esta la pueba realizada despues de minar las transacciones donde se cierra el bloque y se abre uno nuevo, donde luego se muestra como se agrega correctamente la cadena.
 
-![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/Imagen4.jpeg)
+![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen4.jpeg)
 
 # Construido con 🛠️
 
