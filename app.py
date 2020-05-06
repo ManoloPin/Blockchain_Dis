@@ -61,7 +61,8 @@ def mine_transacciones():
         #asegurar la cadena mas larga
         chain_length = len(Blockchain.chain) 
         consenso() # rectificar
-        
+    
+    
         if chain_length == len(Blockchain.chain):
             #anunciar el bloque extraído recientemente a la red
             anunciar_new_block(Blockchain.last_block.index) # rectificar

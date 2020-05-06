@@ -4,7 +4,6 @@ import json
 import time
 
 """--------------------------------------------------------------------------"""
-
 class Block:
     def __init__(self, index, transacciones, timestamp, previous_hash, nonce=0):
         self.index = index # Id unico del bloque
