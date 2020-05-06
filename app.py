@@ -1,12 +1,14 @@
 from flask import Flask, jsonify, Request
 from blockchain import Block, Blockchain
-
+import requests
+import json
+import time
 """--------------------------------------------------------------------------"""
     
 app = Flask(__name__)
 
-blockchain = Blockchain()
-blockchain.crear_genesis_block()
+blockchain = Blockchain
+Blockchain.create_genesis_block()
 
 #direccion de miembros participantes
 
@@ -26,7 +28,7 @@ def nueva_transaccion():
     
     txt_data["timestamp"] = time.time()
     #_____________________________________________
-    blockchain.añadir_new_trnasaction(tx_data) #----- mirar por que nombre uso mi compañero
+    Blockchain.add_new_transaction(tx_data) #----- mirar por que nombre uso mi compañero
     #___________________________________________
     return "EXITO", 201
 
@@ -36,7 +38,7 @@ devuelve la copia del nodo de la cadena, consulta todas las publicacions a mostr
 @app.route('/chain', methods = ['GET'])
 def get_chain():
     chain_data = []
-    for block in blockchain.chain:
+    for block in Blockchain.chain:
         chain_data.append(block.__dict__)
 
     return json.dumps(
@@ -51,20 +53,20 @@ solicitar trnasacciones no confirmadas para minar
 """
 @app.route('/mine', methods = ['GET'])
 def mine_transacciones():
-    resultado = blockchain.mine()# rectificar parametros de blockchain
+    resultado = Blockchain.mine()# rectificar parametros de blockchain
 
     if not resultado:
         return "No hay transacciones para minar"
     else:
         #asegurar la cadena mas larga
-        chain_length = len(blockchain.chain) 
+        chain_length = len(Blockchain.chain) 
         consenso() # rectificar
         
-        if chain_length == len(blockchain.chain):
+        if chain_length == len(Blockchain.chain):
             #anunciar el bloque extraído recientemente a la red
-            anunciar_new_block(blockchain.ultimo_block.index) # rectificar
+            anunciar_new_block(Blockchain.last_block.index) # rectificar
 
-        return "Block #{} esta minado.".format(blockchain.ultimo_block.index)
+        return "Block #{} esta minado.".format(Blockchain.last_block.index)
 
 """
 agregar nuevos pares o (peers) a la red blockchain
@@ -117,7 +119,7 @@ def registrar_con_nodo_existente():
 
 def crear_chain_desde_papelera(chain_papelera):
     generar_blockchain = Blockchain()
-    generar_blockchain.crear_genesis_block()
+    generar_blockchain.create_genesis_block()
     for idx, block_data in enumerate(chain_papelera):
         if idx == 0:
             continue  # omitir el bloque genesis
@@ -147,7 +149,7 @@ def verificar_agregar_block():
                   block_data["nonce"])
 
     prueba = block_data['hash']
-    adicional = blockchain.add_block(block,prueba)
+    adicional = Blockchain.add_block(block,prueba)
 
     if not adicional:
         return "El bloque fue descartado por el nodo", 400
@@ -196,9 +198,6 @@ def anunciar_new_block(block):
         requests.post(url,
                       data=json.dumps(block.__dict__, sort_keys=True),
                       headers=headers)
-
-# Uncomment this line if you want to specify the port number in the code
-#app.run(debug=True, port=8000)  
 
 """-------------------------------------------------"""
 if __name__ == '__main__':
