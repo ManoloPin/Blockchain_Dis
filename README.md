@@ -21,6 +21,20 @@ Luego Clonar el proyecto,
 git clone https://github.com/ManoloPin/Blockchain_Dis.git
 # Ejecutando las pruebas ⚙️
 
+Para ejecutar las pruebas se esta realizando con Running on http://127.0.0.1:5000/new_transactions donde con el Json se realizan las pruebas respectivas.
+    {
+    "autor": "nombre",
+    "contenido": "Alguna informacion adicional",
+    "timestamp: "El tiempo en el que el contenido fue creado"
+    }
+
+
+# Autores ✒️
+
+#
+Expresiones de Gratitud 🎁
+
+
 
 
 
