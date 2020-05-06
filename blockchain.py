@@ -22,7 +22,7 @@ class Blockchain:
     difficulty = 2 # Dificultad del algoritmo hash
 
     def __init__(self):
-        self.unconfirmed_transacciones = []
+        self.unconfirmed_transactions = []
         self.chain = []
 
     def create_genesis_block(self): #Esta funcion es para generar el bloque de genesis y lo agrega a la cadena
@@ -61,8 +61,15 @@ class Blockchain:
 
         return computed_hash
 
-    def add_new_transaction(self, transaction):
-        self.unconfirmed_transacciones.append(transaction)
+    def add_new_transaction(self,sender, recipient, amount):
+
+        self.unconfirmed_transactions.append({
+            'sender': sender,
+            'recipient': recipient, 
+            'amount': amount,
+            }
+            )
+        
 
     @classmethod # Comprueba si el bloque del hash es valido donde valida los criterios de la dificultad
     def is_valid_Prueba(cls, block, block_hash): 
@@ -89,20 +96,20 @@ class Blockchain:
 
     def mine(self): # Esta funcion sirve como interfaz para agregar la transaccion a la cadena de bloques y minarlos
         
-        if not self.unconfirmed_transacciones:
+        if not self.unconfirmed_transactions:
             return False
 
         last_block = self.last_block
 
         new_block = Block(index=last_block.index + 1, # Compara el nuevo bloque con el anterior
-                          transacciones=self.unconfirmed_transacciones, # Muestra la transaccion
+                          transacciones=self.unconfirmed_transactions, # Muestra la transaccion
                           timestamp=time.time(), # Muestra el tiempo
                           previous_hash=last_block.hash) # Compara el hash del nuevo bloque con el anterior
 
         Prueba = self.Prueba_de_trabajo(new_block)
         self.add_block(new_block, Prueba)
 
-        self.unconfirmed_transacciones = []
+        self.unconfirmed_transactions = []
 
         return True
 

@@ -7,8 +7,8 @@ import time
     
 app = Flask(__name__)
 
-blockchain = Blockchain()
-blockchain.create_genesis_block()
+Blockchain = Blockchain()
+Blockchain.create_genesis_block()
 
 #direccion de miembros participantes
 
@@ -19,18 +19,18 @@ agregar transaccion a la cadena de bloques
 """
 @app.route('/new_transactions', methods = ['POST'])
 def nueva_transaccion():
-    tx_data = request.get_json()
-    campos_requeridos = ["autor", "contenido"]
 
-    for campo in campos_requeridos:
-        if not tx_data.get(campo):
-            return "datos de trnasaccion invalidos ", 404
+    values = request.get_json()
+    required = ['sender', 'recipient', 'amount']
+
+    if not all(k in values for k in required ):
     
-    txt_data["timestamp"] = time.time()
-    #_____________________________________________
-    Blockchain.add_new_transaction(tx_data) #----- mirar por que nombre uso mi compañero
-    #___________________________________________
-    return "EXITO", 201
+        return "datos de transaccion invalidos ", 404
+    
+    index = Blockchain.add_new_transaction(values['sender'],values['recipient'],values['amount']) 
+
+    response ={'menssage': f"La transacción se agregará al Bloque"}
+    return jsonify(response), 201
 
 """
 devuelve la copia del nodo de la cadena, consulta todas las publicacions a mostras
@@ -104,7 +104,7 @@ def registrar_con_nodo_existente():
                              data=json.dumps(data), headers=headers) # rectificar
 
     if respuesta.status_code == 200:
-        global blockchain
+        global Blockchain
         global peers #pares
 
         # actualizar la cadena y los pares
@@ -159,7 +159,7 @@ def verificar_agregar_block():
 """consultar transacciones no confirmadas"""
 @app.route('/pendiente_tx')
 def get_pendiente_tx():
-    return json.dumps(blockchain.unconfirmed_transactions) 
+    return json.dumps(Blockchain.unconfirmed_transactions) 
     """rectificar """#gsjhdsjdsdjsdhjsjh----------------------------------
 
 
@@ -167,16 +167,16 @@ def consenso():
     """
     si se encuentra una cadena mas larga la cadena se remplaza por la mas larga
     """
-    global blockchain
+    global Blockchain
 
     longest_chain = None
-    current_len = len(blockchain.chain)
+    current_len = len(Blockchain.chain)
 
     for nodo in peers:
         response = requests.get('{}chain'.format(nodo))
         length = response.json()['length']
         chain = response.json()['chain']
-        if length > current_len and blockchain.check_chain_validity(chain):
+        if length > current_len and Blockchain.check_chain_validity(chain):
             current_len = length
             longest_chain = chain
 
