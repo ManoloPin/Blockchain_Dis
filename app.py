@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, Request
+from flask import Flask, jsonify, request
 from blockchain import Block, Blockchain
 import requests
 import json
