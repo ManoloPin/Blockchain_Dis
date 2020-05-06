@@ -35,9 +35,9 @@ Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:50
 y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
     {
-    "autor": "nombre",
-    "contenido": "Alguna informacion adicional",
-    "timestamp: "El tiempo en el que el contenido fue creado"
+    "sender": "Remitente",
+    "recipient": "Destinatario",
+    "amount: "Cantidad"
     }
 
 # Vista previa ⌨️
