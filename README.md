@@ -25,9 +25,14 @@ Luego Clonar el proyecto
 
 # Ejecutando las pruebas ⚙️
 
-Se debe ejecutar el archivo app.py para que se puedan ejecutar de igual forma el archivo blockchain.py.
+Se debe ejecutar el archivo 	
 
-Luego al ejecutar genera un link http://127.0.0.1:5000 para que luego se debe copiar en Insomnea dicho link y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
+	python app.py 
+
+para que se puedan ejecutar de igual forma el archivo blockchain.py
+
+Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:5000, pero luego se debe copiar en Insomnea dicho link 
+y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
     {
     "autor": "nombre",
