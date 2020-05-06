@@ -7,8 +7,8 @@ import time
     
 app = Flask(__name__)
 
-blockchain = Blockchain
-Blockchain.create_genesis_block()
+blockchain = Blockchain()
+blockchain.create_genesis_block()
 
 #direccion de miembros participantes
 
