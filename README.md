@@ -35,9 +35,9 @@ Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:50
 y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
     {
-    "autor": "nombre",
-    "contenido": "Alguna informacion adicional",
-    "timestamp: "El tiempo en el que el contenido fue creado"
+    "sender": "Remitente",
+    "recipient": "Destinatario",
+    "amount: "Cantidad"
     }
 
 # Vista previa ⌨️
@@ -57,4 +57,4 @@ y se incluye /new_transactions para que se podamos incluir el siguiente codigo J
 - John ALejandro Solorza Guerrero
 
 # Expresiones de Gratitud 🎁
-Agradecemos al profesor por Carlos Armando Lopez Solano por su colaboracion y enseñanza que se ha realizado de forma virutal por temas de la pandemia Covic-19, ya que ha tenido dedicacion y paciencia para enseñarnos por este medio.
+Agradecemos al profesor por Carlos Armando Lopez Solano por su colaboracion y enseñanza que se ha realizado de forma virutal por temas de la pandemia Covid-19, ya que ha tenido dedicacion y paciencia para enseñarnos por este medio.
