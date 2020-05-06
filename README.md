@@ -31,7 +31,7 @@ Se debe ejecutar el archivo
 
 para que se puedan ejecutar de igual forma el archivo blockchain.py
 
-Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:5000, pero luego se debe copiar en Insomnea dicho link 
+Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:5000, pero despues se debe copiar en Insomnea dicho link 
 y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
     {
