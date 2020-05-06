@@ -57,4 +57,4 @@ y se incluye /new_transactions para que se podamos incluir el siguiente codigo J
 - John ALejandro Solorza Guerrero
 
 # Expresiones de Gratitud 🎁
-Agradecemos al profesor por Carlos Armando Lopez Solano por su colaboracion y enseñanza que se ha realizado de forma virutal por temas de la pandemia Covic-19, ya que ha tenido dedicacion y paciencia para enseñarnos por este medio.
+Agradecemos al profesor por Carlos Armando Lopez Solano por su colaboracion y enseñanza que se ha realizado de forma virutal por temas de la pandemia Covid-19, ya que ha tenido dedicacion y paciencia para enseñarnos por este medio.
