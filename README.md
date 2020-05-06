@@ -1,6 +1,6 @@
 # Blockchain
 Es un trabajo realizado para Sistemas Distribuidos donde demostramos el funcionamiento de Blockchain con lenguaje de programacion Python 
-y se utilizo como editor de codigo visual Strudio code, donde tambien con Insomnia se realizaron las pruebas de los datos.
+y se utilizo como editor de codigo visual Studio Code, donde tambien con Insomnia se realizaron las pruebas de los datos.
 
 # ¿Qué es "blockchain"?🚀
 Blockchain es una forma de almacenar datos digitales. Los datos pueden ser literalmente cualquier cosa. Para Bitcoin, son las transacciones 
