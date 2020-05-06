@@ -15,10 +15,14 @@ Para utilizar el programa se debe tener instaldo en el sistema python3, flask,re
 # Instalación 🔧
 Tener instalado algun editor de codigo para python3
 
-Tambien se debe instalar flask en python3 revisar el siguiente:
-link https://flask.palletsprojects.com/en/1.1.x/installation/
-Luego Clonar el proyecto,
-git clone https://github.com/ManoloPin/Blockchain_Dis.git
+Tambien se debe instalar flask en python3 revisar el siguiente link:
+
+	https://flask.palletsprojects.com/en/1.1.x/installation/
+    
+Luego Clonar el proyecto
+
+	git clone https://github.com/ManoloPin/Blockchain_Dis.git
+
 # Ejecutando las pruebas ⚙️
 
 Para ejecutar las pruebas se esta realizando con Running on http://127.0.0.1:5000/new_transactions donde con el Json se realizan las pruebas respectivas.
@@ -29,14 +33,21 @@ Para ejecutar las pruebas se esta realizando con Running on http://127.0.0.1:500
     "timestamp: "El tiempo en el que el contenido fue creado"
     }
 
+# Vista previa ⌨️
+
+# Construido con 🛠️
+
+- Visual Studio Code - Editor de codigo
+- Insomnia - Realizar pruebas de datos
+- Python3 - Lenguaje de Programacion
+- Flask - El framework web usado
+- xampp - Servidor Web
+
 
 # Autores ✒️
 
-#
-Expresiones de Gratitud 🎁
+-Jose Manuel Pinilla Casas
+-John ALejandro Solorza Guerrero
 
-
-
-
-
-
+# Expresiones de Gratitud 🎁
+Agradecemos al profesor por Carlos Armando Lopez Solano por su colaboracion y enseñanza que se ha realizado de forma virutal por temas de la pandemia Covic-19, ya que ha tenido dedicacion y paciencia para enseñarnos por este medio.
