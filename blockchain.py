@@ -1,9 +1,10 @@
 from hashlib import sha256
-from flask import Flask, request
 import json
 import time
 
-"""--------------------------------------------------------------------------"""
+from flask import Flask, request
+import requests
+
 class Block:
     def __init__(self, index, transacciones, timestamp, previous_hash, nonce=0):
         self.index = index # Id unico del bloque
@@ -15,13 +16,13 @@ class Block:
     def compute_hash(self): # Funcion que devuelve el hash del contenido del bloque.
         block_string = json.dumps(self.__dict__, sort_keys=True)
         return sha256(block_string.encode()).hexdigest()
-"""---------------------------------------------------------------------------"""
+
 class Blockchain:
 
     difficulty = 2 # Dificultad del algoritmo hash
 
     def __init__(self):
-        self.unconfirmed_transactions = []
+        self.unconfirmed_transacciones = []
         self.chain = []
 
     def create_genesis_block(self): #Esta funcion es para generar el bloque de genesis y lo agrega a la cadena
@@ -60,15 +61,8 @@ class Blockchain:
 
         return computed_hash
 
-    def add_new_transaction(self,sender, recipient, amount):
-
-        self.unconfirmed_transactions.append({
-            'sender': sender,
-            'recipient': recipient, 
-            'amount': amount,
-            }
-            )
-        
+    def add_new_transaction(self, transaction):
+        self.unconfirmed_transacciones.append(transaction)
 
     @classmethod # Comprueba si el bloque del hash es valido donde valida los criterios de la dificultad
     def is_valid_Prueba(cls, block, block_hash): 
@@ -95,20 +89,19 @@ class Blockchain:
 
     def mine(self): # Esta funcion sirve como interfaz para agregar la transaccion a la cadena de bloques y minarlos
         
-        if not self.unconfirmed_transactions:
+        if not self.unconfirmed_transacciones:
             return False
 
         last_block = self.last_block
 
         new_block = Block(index=last_block.index + 1, # Compara el nuevo bloque con el anterior
-                          transacciones=self.unconfirmed_transactions, # Muestra la transaccion
+                          transacciones=self.unconfirmed_transacciones, # Muestra la transaccion
                           timestamp=time.time(), # Muestra el tiempo
                           previous_hash=last_block.hash) # Compara el hash del nuevo bloque con el anterior
 
         Prueba = self.Prueba_de_trabajo(new_block)
         self.add_block(new_block, Prueba)
 
-        self.unconfirmed_transactions = []
+        self.unconfirmed_transacciones = []
 
         return True
-
