@@ -1,6 +1,6 @@
 # Blockchain
 Es un trabajo realizado para Sistemas Distribuidos donde demostramos el funcionamiento de Blockchain con lenguaje de programacion Python 
-y se utilizo como editor de codigo visual Strudio code, tambien con Insomnia se realizaron las pruebas de interfaz.
+y se utilizo como editor de codigo visual Strudio code, donde tambien con Insomnia se realizaron las pruebas de los datos.
 
 # ¿Qué es "blockchain"?🚀
 Blockchain es una forma de almacenar datos digitales. Los datos pueden ser literalmente cualquier cosa. Para Bitcoin, son las transacciones 
@@ -25,7 +25,9 @@ Luego Clonar el proyecto
 
 # Ejecutando las pruebas ⚙️
 
-Para ejecutar las pruebas se esta realizando con Running on http://127.0.0.1:5000/new_transactions donde con el Json se realizan las pruebas respectivas.
+Se debe ejecutar el archivo app.py para que se puedan ejecutar de igual forma el archivo blockchain.py.
+
+Luego al ejecutar genera un link http://127.0.0.1:5000 para que luego se debe copiar en Insomnea dicho link y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
     {
     "autor": "nombre",
@@ -46,8 +48,8 @@ Para ejecutar las pruebas se esta realizando con Running on http://127.0.0.1:500
 
 # Autores ✒️
 
--Jose Manuel Pinilla Casas
--John ALejandro Solorza Guerrero
+- Jose Manuel Pinilla Casas
+- John ALejandro Solorza Guerrero
 
 # Expresiones de Gratitud 🎁
 Agradecemos al profesor por Carlos Armando Lopez Solano por su colaboracion y enseñanza que se ha realizado de forma virutal por temas de la pandemia Covic-19, ya que ha tenido dedicacion y paciencia para enseñarnos por este medio.
