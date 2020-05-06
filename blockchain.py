@@ -4,7 +4,7 @@ import time
 
 from flask import Flask, request
 import requests
-
+"""-----------------------------------------------------------------------------"""
 class Block:
     def __init__(self, index, transacciones, timestamp, previous_hash, nonce=0):
         self.index = index # Id unico del bloque
@@ -16,7 +16,7 @@ class Block:
     def compute_hash(self): # Funcion que devuelve el hash del contenido del bloque.
         block_string = json.dumps(self.__dict__, sort_keys=True)
         return sha256(block_string.encode()).hexdigest()
-
+"""-----------------------------------------------------------------------------"""
 class Blockchain:
 
     difficulty = 2 # Dificultad del algoritmo hash
