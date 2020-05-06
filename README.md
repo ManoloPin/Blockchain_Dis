@@ -13,25 +13,25 @@ una lista vinculada que contiene datos ordenados.
 # Pre-requisitos 📋
 Para utilizar el programa se debe tener instaldo en el sistema python3, flask,request.
 # Instalación 🔧
-Tener instalado algun editor de codigo para python3
+- Tener instalado algun editor de codigo para python3
 
-Tambien se debe instalar flask en python3 revisar el siguiente link:
+- Tambien se debe instalar flask en python3 revisar el siguiente link:
 
 	https://flask.palletsprojects.com/en/1.1.x/installation/
     
-Luego Clonar el proyecto
+- Luego Clonar el proyecto
 
 	git clone https://github.com/ManoloPin/Blockchain_Dis.git
 
 # Ejecutando las pruebas ⚙️
 
-Se debe ejecutar el archivo 	
+- Se debe ejecutar el archivo 	
 
 	python app.py 
 
 para que se puedan ejecutar de igual forma el archivo blockchain.py
 
-Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:5000, pero despues se debe copiar en Insomnea dicho link 
+- Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:5000, pero despues se debe copiar en Insomnea dicho link 
 y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
     {
