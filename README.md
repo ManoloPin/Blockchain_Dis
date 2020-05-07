@@ -67,6 +67,7 @@ y se incluye /new_transactions para que se podamos incluir el siguiente codigo J
 - Python3 - Lenguaje de Programacion
 - Flask - El framework web usado
 - xampp - Servidor Web
+-
 
 
 # Autores ✒️
