@@ -3,7 +3,7 @@ Es un trabajo realizado para Sistemas Distribuidos donde demostramos el funciona
 y se utilizo como editor de codigo visual Studio Code, donde tambien con Insomnia se realizaron las pruebas de los datos.
 
 # ¿Qué es "blockchain"?🚀
-Blockchain es una forma de almacenar datos digitales. Los datos pueden ser literalmente cualquier cosa. Para Bitcoin, son las transacciones 
+Blockchain es una forma de almacenar datos digitales.Es un registro unico, consensuado y distrubuido en varios nodos de red. Los datos pueden ser literalmente cualquier cosa. Para Bitcoin, son las transacciones 
 (registros de transferencias de Bitcoin de una cuenta a otra), pero incluso pueden ser archivos; No importa. Los datos se almacenan en forma 
 de bloques, que están vinculados (o encadenados) juntos mediante hashes criptográficos, de ahí el nombre "blockchain."
 
@@ -67,7 +67,7 @@ y se incluye /new_transactions para que se podamos incluir el siguiente codigo J
 - Python3 - Lenguaje de Programacion
 - Flask - El framework web usado
 - xampp - Servidor Web
--
+
 
 
 # Autores ✒️
