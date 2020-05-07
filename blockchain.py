@@ -1,7 +1,6 @@
-from hashlib import sha256
 from flask import Flask, request
-import json
-import time
+from hashlib import sha256
+import json, time
 
 """--------------------------------------------------------------------------"""
 class Block:

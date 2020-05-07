@@ -24,9 +24,7 @@ def nueva_transaccion():
     required = ['sender', 'recipient', 'amount']
 
     if not all(k in values for k in required ):
-    
         return "datos de transaccion invalidos ", 404
-    
     index = Blockchain.add_new_transaction(values['sender'],values['recipient'],values['amount']) 
 
     response ={'menssage': f"La transacción se agregará al Bloque"}
