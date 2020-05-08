@@ -1,3 +1,10 @@
+# Api enlazada:
+
+http://158.69.63.154:5000/new_transactions
+http://158.69.63.154:5000/mine
+http://158.69.63.154:5000/chain
+
+
 # Blockchain
 Es un trabajo realizado para Sistemas Distribuidos donde demostramos el funcionamiento de Blockchain con lenguaje de programacion Python 
 y se utilizo como editor de codigo visual Studio Code, donde tambien con Insomnia se realizaron las pruebas de los datos.
@@ -25,7 +32,9 @@ Para utilizar el programa se debe tener instaldo en el sistema python3, flask,re
 
 # Ejecutando las pruebas ⚙️
 
-- Api enlazada: http://158.69.63.154:5000/
+- Api enlazada: hhttp://158.69.63.154:5000/new_transactions
+		http://158.69.63.154:5000/mine
+		http://158.69.63.154:5000/chain
 
 - Se debe ejecutar el archivo 	
 
@@ -66,7 +75,7 @@ http://158.69.63.154:5000/chain
 
 - Aqui esta la pueba realizada despues de minar las transacciones donde se cierra el bloque y se abre uno nuevo, donde luego se muestra como se agrega correctamente la cadena.
 
-http://158.69.63.154:5000/añadir_block
+http://158.69.63.154:5000/mine
 
 ![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen4.jpeg)
 
