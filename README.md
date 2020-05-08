@@ -1,8 +1,8 @@
 # Api enlazada:
 
-http://158.69.63.154:5000/new_transactions
-http://158.69.63.154:5000/mine
-http://158.69.63.154:5000/chain
+- http://158.69.63.154:5000/new_transactions
+- http://158.69.63.154:5000/mine
+- http://158.69.63.154:5000/chain
 
 
 # Blockchain
