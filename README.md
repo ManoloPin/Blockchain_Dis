@@ -31,7 +31,7 @@ Para utilizar el programa se debe tener instaldo en el sistema python3, flask,re
 
 para que se puedan ejecutar de igual forma el archivo blockchain.py
 
-Luego al ejecutar la aplicacion debe tener funcionamiento en http://127.0.0.1:5000, pero despues se debe copiar en Insomnea dicho link 
+Luego al ejecutar la aplicacion debe tener funcionamiento en Api enlazada: http://158.69.63.154:5000/, pero despues se debe copiar en Insomnea dicho link 
 y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
 
@@ -46,25 +46,25 @@ y se incluye /new_transactions para que se podamos incluir el siguiente codigo J
 
 - Esta es una vista previa de como esta funcinando las pruebas de Insomnia para verificar si esta ingresando la transferencia.
 
-http://127.0.0.1:5000/new_transactions
+http://158.69.63.154:5000/new_transactions
 
 ![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen1.jpeg)
 
 - Con este codigo se esta verificando la cadena de los bloques.
 
-http://127.0.0.1:5000/chain
+http://158.69.63.154:5000/chain
 
 ![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen2.jpeg)
 
 - Este es otra prueba realizada donde hay dos transacciones en el bloque con la funcion minar, ya que se entiende que para utilizar la funcion para cerrar el bloque ya que sin minar no se puede agregar el bloque.
 
-http://127.0.0.1:5000/chain
+http://158.69.63.154:5000/chain
 
 ![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen3.jpeg)
 
 - Aqui esta la pueba realizada despues de minar las transacciones donde se cierra el bloque y se abre uno nuevo, donde luego se muestra como se agrega correctamente la cadena.
 
-http://127.0.0.1:5000/añadir_block
+http://158.69.63.154:5000/añadir_block
 
 ![stack Overflow](https://github.com/ManoloPin/Blockchain_Dis/blob/master/img/Imagen4.jpeg)
 
