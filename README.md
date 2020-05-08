@@ -42,7 +42,7 @@ Para utilizar el programa se debe tener instaldo en el sistema python3, flask,re
 
 para que se puedan ejecutar de igual forma el archivo blockchain.py
 
-Luego al ejecutar la aplicacion debe tener funcionamiento en Api enlazada: http://158.69.63.154:5000/, pero despues se debe copiar en Insomnea dicho link 
+Luego al ejecutar la aplicacion debe tener funcionamiento en Api enlazada: http://158.69.63.154:5000/new_transactions, pero despues se debe copiar en Insomnea dicho link 
 y se incluye /new_transactions para que se podamos incluir el siguiente codigo Json para realizar las pruebas pertinentes.
 
 
