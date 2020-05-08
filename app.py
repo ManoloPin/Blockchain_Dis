@@ -24,14 +24,62 @@ def nueva_transaccion():
     required = ['sender', 'recipient', 'amount']
 
     if not all(k in values for k in required ):
-    
         return "datos de transaccion invalidos ", 404
-    
     index = Blockchain.add_new_transaction(values['sender'],values['recipient'],values['amount']) 
 
     response ={'menssage': f"La transacción se agregará al Bloque"}
     return jsonify(response), 201
 
+"""
+solicitar trnasacciones no confirmadas para minar
+"""
+
+@app.route('/mine', methods = ['GET'])
+def mine_transacciones():
+    resultado = Blockchain.mine()# rectificar parametros de blockchain
+
+    if not resultado:                                                   # recordar rectifica 
+        return "No hay transacciones para minar"
+    else:
+        #asegurar la cadena mas larga
+        chain_length = len(Blockchain.chain) 
+        consenso() # rectificar
+    
+    
+        if chain_length == len(Blockchain.chain):
+            #anunciar el bloque extraído recientemente a la red
+            anunciar_new_block(Blockchain.last_block.index) # rectificar
+
+        return "Block #{} esta minado.".format(Blockchain.last_block.index)
+
+"""-----------------------------------------------"""
+@app.route('/mine', methods = ['POST'])
+def mine1_transacciones():
+
+    values = request.get_json()
+    required = request.json['hash'] # capturar el hash enviado de openclose
+    
+    if required == Blockchain.last_block.hash:
+
+        resultado = Blockchain.mine()# rectificar parametros de blockchain
+        
+        if not resultado:
+            return "No hay transacciones para minar"
+        else:
+            #asegurar la cadena mas larga
+            chain_length = len(Blockchain.chain) 
+            consenso() # rectificar  
+            
+            if chain_length == len(Blockchain.chain):
+                #anunciar el bloque extraído recientemente a la red
+                anunciar_new_block(Blockchain.last_block.index) # rectificar
+                
+            return "Block #{} esta minado.".format(Blockchain.last_block.index)
+
+    else: 
+         response ={'menssage': f"EL hash no coincide con los ejercicios realizados"}
+         return jsonify(response), 400
+"""------------------------------------------------"""
 """
 devuelve la copia del nodo de la cadena, consulta todas las publicacions a mostras
 """
@@ -49,24 +97,32 @@ def get_chain():
         })
 
 """
-solicitar trnasacciones no confirmadas para minar
+devuelve la copia del Bloque
 """
-@app.route('/mine', methods = ['GET'])
-def mine_transacciones():
-    resultado = Blockchain.mine()# rectificar parametros de blockchain
+@app.route('/block', methods = ['GET'])
 
-    if not resultado:
-        return "No hay transacciones para minar"
+def get_block():
+
+    resultado = Blockchain.see_block()# rectificar parametros de blockchain
+    if not resultado:                                                   # recordar rectifica 
+        return "No hay transacciones para guardar en el bloque"
     else:
         #asegurar la cadena mas larga
-        chain_length = len(Blockchain.chain) 
-        consenso() # rectificar
-        
-        if chain_length == len(Blockchain.chain):
-            #anunciar el bloque extraído recientemente a la red
-            anunciar_new_block(Blockchain.last_block.index) # rectificar
+        block_length = len(Blockchain.block_A) 
+        consenso() 
 
-        return "Block #{} esta minado.".format(Blockchain.last_block.index)
+        if block_length == len(Blockchain.chain):
+                #anunciar el bloque extraído recientemente a la red
+                anunciar_new_block(Blockchain.last_block.index) # rectificar
+
+        block_data = []
+        for block in Blockchain.block_A:
+            block_data.append(block.__dict__)
+        
+        return json.dumps(
+            {
+                "block": block_data,
+            })
 
 """
 agregar nuevos pares o (peers) a la red blockchain
@@ -201,4 +257,4 @@ def anunciar_new_block(block):
 
 """-------------------------------------------------"""
 if __name__ == '__main__':
-    app.run(debug=True, port = 5000)
+    app.run(host= '158.69.63.154', port = 5000)

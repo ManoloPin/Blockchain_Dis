@@ -16,6 +16,7 @@ class Block:
     def compute_hash(self): # Funcion que devuelve el hash del contenido del bloque.
         block_string = json.dumps(self.__dict__, sort_keys=True)
         return sha256(block_string.encode()).hexdigest()
+
 """---------------------------------------------------------------------------"""
 class Blockchain:
 
@@ -24,6 +25,7 @@ class Blockchain:
     def __init__(self):
         self.unconfirmed_transactions = []
         self.chain = []
+        self.block_A = [] #guardar bloque actual
 
     def create_genesis_block(self): #Esta funcion es para generar el bloque de genesis y lo agrega a la cadena
 
@@ -112,4 +114,20 @@ class Blockchain:
         self.unconfirmed_transactions = []
 
         return True
+
+    def see_block(self): # mostrar bloque
+        
+        if not self.unconfirmed_transactions:
+            return False
+
+        last_block = self.last_block
+
+        new_block = Block(index=last_block.index + 1, # Compara el nuevo bloque con el anterior
+                          transacciones=self.unconfirmed_transactions, # Muestra la transaccion
+                          timestamp=time.time(), # Muestra el tiempo
+                          previous_hash=last_block.hash) # Compara el hash del nuevo bloque con el anterior
+
+        Prueba = self.Prueba_de_trabajo(new_block)
+        self.unconfirmed_transactions = []
+        return True       
 
