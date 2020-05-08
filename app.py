@@ -200,4 +200,4 @@ def anunciar_new_block(block):
 
 """-------------------------------------------------"""
 if __name__ == '__main__':
-    app.run(debug=True, port = 5000)
+    app.run(host= '158.69.63.154', port = 5000)
