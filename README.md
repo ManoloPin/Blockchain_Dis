@@ -25,6 +25,8 @@ Para utilizar el programa se debe tener instaldo en el sistema python3, flask,re
 
 # Ejecutando las pruebas ⚙️
 
+- Api enlazada: http://158.69.63.154:5000/
+
 - Se debe ejecutar el archivo 	
 
 	python app.py 
