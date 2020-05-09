@@ -93,7 +93,6 @@ http://158.69.63.154:5000/mine
 
 - Jose Manuel Pinilla Casas
 - John Alejandro Solorza Guerrero
-- Stephen Silva 
 
 # Expresiones de Gratitud 🎁
 Agradecemos al profesor por Carlos Armando Lopez Solano por su colaboracion y enseñanza que se ha realizado de forma virutal por temas de la pandemia Covid-19, ya que ha tenido dedicacion y paciencia para enseñarnos por este medio.
