@@ -25,7 +25,7 @@ def nueva_transaccion():
 
     if not all(k in values for k in required ):
         return "datos de transaccion invalidos ", 404
-    index = Blockchain.add_new_transaction(values['sender'],values['recipient'],values['amount']) 
+    index = Blockchain.add_new_transaction(values['origen'],values['operacion'],values['datos']) 
 
     response ={'menssage': f"La transacción se agregará al Bloque"}
     return jsonify(response), 201
