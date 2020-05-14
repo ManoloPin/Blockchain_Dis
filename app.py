@@ -21,7 +21,7 @@ agregar transaccion a la cadena de bloques
 def nueva_transaccion():
 
     values = request.get_json()
-    required = ['sender', 'recipient', 'amount']
+    required = ['origen', 'operacion', 'datos']
 
     if not all(k in values for k in required ):
         return "datos de transaccion invalidos ", 404

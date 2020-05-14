@@ -59,12 +59,12 @@ class Blockchain:
 
         return computed_hash
 
-    def add_new_transaction(self,sender, recipient, amount):
+    def add_new_transaction(self,origen, operacion, datos):
 
         self.unconfirmed_transactions.append({
-            'sender': sender,
-            'recipient': recipient, 
-            'amount': amount,
+            'origen': origen,
+            'operacion': operacion, 
+            'datos': datos,
             }
             )
         
